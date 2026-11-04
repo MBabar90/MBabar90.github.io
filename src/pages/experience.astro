@@ -1,0 +1,142 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Ledger from '../components/Ledger.astro';
+
+const credly = 'https://credly.com/users/muhammad-babar.8671adcf/badges';
+const employers = [
+  {
+    name: 'Engro Corporation',
+    place: 'Karachi',
+    dates: 'Nov 2022 – Jan 2026',
+    context: "One of Pakistan's largest conglomerates, with businesses in fertilisers, energy, petrochemicals and telecom infrastructure. People analytics for the group's subsidiaries.",
+    roles: [
+      {
+        title: 'Deputy Manager, People Analytics',
+        dates: 'Nov 2022 – Jan 2026',
+        points: [
+          'Reconciled employee records from several SAP HCM instances across subsidiaries, matching people whose IDs changed between companies on name, date of birth and national ID, then migrated one clean history per employee into SAP SuccessFactors.',
+          'Built the Employee 360 view on top: 1M+ workforce data points, first through scheduled SuccessFactors extracts into Excel and Power BI, then in QlikSense, and finally on the group\'s AWS platform.',
+          'Automated group HR reporting with Power Query and Power BI for departments across the subsidiaries, cutting manual reporting effort by 70%.',
+          'Automated high-volume work in Python: certificates for 2,500+ employees generated as PDFs and images, and personalised emails with individual attachments sent across the group.',
+          'Supported the AWS data platform team: mapped SuccessFactors data to the AWS views, defined the key indicators and review checks, and validated the results.',
+          'Contributed to the HR chatbot proof of concept and testing on the data side.',
+          'Produced workforce planning analysis and KPI dashboards for senior management.',
+        ],
+      },
+    ],
+    tools: 'Power BI, Power Query, QlikSense, Python, Excel, SAP SuccessFactors, SAP HCM',
+  },
+  {
+    name: 'SHMA Consulting',
+    place: 'Karachi',
+    dates: 'Jul 2016 – Nov 2022',
+    context: 'Actuarial consulting for insurers in the Middle East and South Asia.',
+    roles: [
+      {
+        title: 'Assistant Manager',
+        dates: 'Jul 2021 – Nov 2022',
+        points: [
+          'Delivered Central Bank of UAE actuarial requirements for ADNIC, where SHMA was the appointed external actuary: underwriting reviews, the pricing adequacy report, reserving and ad hoc analysis, alongside loss variance and reinsurance strategy work for other major UAE insurers.',
+          'Combined actuarial, claims and reinsurance data in integrated Alteryx and Excel frameworks, shortening reporting cycles.',
+          'Built Qlik dashboards and variance models that improved reporting accuracy and turnaround.',
+          "Led research and development of a UAE Workers' Compensation framework, including pricing models and reinsurance insights.",
+        ],
+      },
+      {
+        title: 'Senior Actuarial Analyst',
+        dates: 'Jul 2017 – Jun 2021',
+        points: [
+          "Built early IFRS 17 base models in Excel and Power Query as part of the firm's modelling team, while the standard was still new to the market.",
+          'Automated valuation and reporting with Excel VBA and Qlik, shortening turnaround.',
+          'Delivered reserving, pricing adequacy and performance analysis for ADNIC.',
+          'Supported reinsurance programme reviews across quota share and excess of loss structures.',
+        ],
+      },
+      {
+        title: 'Actuarial Analyst',
+        dates: 'Jul 2016 – Jun 2017',
+        points: [
+          'Automated reporting with VBA macros, lifting efficiency by more than 50%.',
+          'Built pricing, reserving and capital adequacy models.',
+          'Prepared Central Bank of UAE regulatory submissions and actuarial audit documentation.',
+        ],
+      },
+    ],
+    tools: 'Excel, VBA, Power Query, Alteryx, Qlik',
+  },
+];
+const toolkit = [
+  { title: 'On the job, every day', items: ['Power BI', 'Power Query', 'QlikSense', 'QlikView', 'Excel and VBA', 'Alteryx Designer', 'Python (automation)', 'SAP SuccessFactors', 'SAP HCM'] },
+  { title: 'Domain', items: ['People analytics', 'Workforce planning', 'HR data migration', 'Actuarial reserving', 'Pricing adequacy', 'Reinsurance', 'CBUAE regulatory reporting', 'IFRS 17 foundations'] },
+  { title: 'Certified, building hands-on', items: ['SQL', 'Python for data science', 'Data analysis'] },
+  { title: 'Shipped in FINSTRIDE', items: ['Flask', 'PostgreSQL', 'JavaScript', 'Web security', 'Paddle payments', 'Render', 'Neon'] },
+];
+const credentials = [
+  { num: '2022', what: 'Google Data Analytics Certificate', where: 'Google' },
+  { num: '2021', what: 'IBM Data Science Professional Certificate', where: 'IBM' },
+  { num: '2021', what: 'IBM Data Analyst Professional Certificate', where: 'IBM' },
+  { num: '2021', what: 'Applied Data Science with Python', where: 'University of Michigan, Coursera' },
+  { num: '2021', what: 'Alteryx Designer', where: 'Alteryx' },
+  { num: 'SOA', what: 'Society of Actuaries exams P, FM and MFE; VEE in Finance and Statistics', where: 'Society of Actuaries' },
+  { num: '2015', what: 'MBA, Business Management and Marketing', where: 'SZABIST' },
+  { num: '2013', what: 'BBA, Finance', where: 'Bahria University' },
+];
+---
+<Base
+  title="Experience | Muhammad Babar"
+  description="Career history, toolkit and credentials of Muhammad Babar: actuarial consulting at SHMA and group people analytics at Engro."
+>
+  <PageHeader
+    title="From actuarial models to group-wide people analytics"
+    lede="Two disciplines, one standard: every number traceable to its source."
+  />
+
+  <section class="sec" aria-labelledby="career">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="career">Career</h2></div>
+      {employers.map((e) => (
+        <div class="employer">
+          <div class="employer-side">
+            <h3>{e.name}</h3>
+            <p class="meta">{e.place}</p>
+            <p class="meta">{e.dates}</p>
+            <p class="context">{e.context}</p>
+          </div>
+          <div>
+            {e.roles.map((r) => (
+              <div class="job">
+                <h4>{r.title}</h4>
+                <p class="dates">{r.dates}</p>
+                <ul>{r.points.map((p) => <li>{p}</li>)}</ul>
+              </div>
+            ))}
+            <p class="tools">Tools: {e.tools}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="sec sec-flush" aria-labelledby="toolkit">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="toolkit">Toolkit</h2></div>
+      <div class="toolkit">
+        {toolkit.map((g) => (
+          <div>
+            <h3>{g.title}</h3>
+            <ul>{g.items.map((i) => <li>{i}</li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-flush" aria-labelledby="credentials">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="credentials">Credentials</h2></div>
+      <Ledger rows={credentials} size="sm" />
+      <p class="more"><a class="link" href={credly} target="_blank" rel="noopener">Verify credentials on Credly</a></p>
+    </div>
+  </section>
+</Base>

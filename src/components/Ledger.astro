@@ -1,0 +1,10 @@
+---
+interface Row { num: string; what: string; where: string }
+interface Props { rows: Row[]; size?: 'lg' | 'sm' }
+const { rows, size = 'lg' } = Astro.props;
+---
+<ul class={`ledger ledger-${size}`}>
+  {rows.map((r) => (
+    <li><span class="num">{r.num}</span><span class="what">{r.what}</span><span class="where">{r.where}</span></li>
+  ))}
+</ul>

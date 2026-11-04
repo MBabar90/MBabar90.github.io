@@ -1,0 +1,32 @@
+---
+interface Props {
+  id: string; area: string; title: string; years: string; tools: string; role: string;
+  problem: string; method: string; figure?: string; result: string;
+}
+const { id, area, title, years, tools, role, problem, method, figure, result } = Astro.props;
+---
+<article class="case" id={id}>
+  <div class="case-meta">
+    <p class="area">{area}</p>
+    <h2>{title}</h2>
+    <p class="years">{years}</p>
+    <p class="tools">Tools: {tools}</p>
+    <p class="tools case-role">Role: {role}</p>
+  </div>
+  <div class="case-body">
+    <div>
+      <h3>Problem</h3>
+      <p>{problem}</p>
+    </div>
+    <div>
+      <h3>Method</h3>
+      <p>{method}</p>
+      <slot />
+    </div>
+    <div>
+      <h3>Result</h3>
+      {figure && <p class="fig">{figure}</p>}
+      <p>{result}</p>
+    </div>
+  </div>
+</article>

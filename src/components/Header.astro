@@ -1,0 +1,26 @@
+---
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/experience', label: 'Experience' },
+  { href: '/work', label: 'Case studies' },
+  { href: '/projects', label: 'Projects' },
+];
+const current = (href: string) => (href === path ? 'page' : undefined);
+const linkedin = 'https://linkedin.com/in/mubabar90';
+---
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/">Muhammad Babar</a>
+    <nav class="nav-desktop" aria-label="Main">
+      {links.map((l) => <a href={l.href} aria-current={current(l.href)}>{l.label}</a>)}
+    </nav>
+    <a class="btn btn-graphite" href={linkedin} target="_blank" rel="noopener">LinkedIn</a>
+    <details class="menu">
+      <summary>Menu</summary>
+      <nav class="menu-panel" aria-label="Main (mobile)">
+        {links.map((l) => <a href={l.href} aria-current={current(l.href)}>{l.label}</a>)}
+      </nav>
+    </details>
+  </div>
+</header>

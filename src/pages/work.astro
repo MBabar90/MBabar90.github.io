@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CaseFile from '../components/CaseFile.astro';
+import MatchDiagram from '../components/MatchDiagram.astro';
+
+const cases = [
+  {
+    id: 'employee-360',
+    area: 'Engro, people analytics',
+    title: 'One history for every employee',
+    years: '2022 – 2026',
+    tools: 'Power Query, Excel, Power BI, QlikSense, SAP HCM, SAP SuccessFactors',
+    problem: "Employees moved between the group's subsidiaries, and each SAP HCM instance issued its own ID. The same person existed as several unconnected records, so no system could show a complete career history.",
+    method: "Consolidated the records in Power Query and matched people on a composite key of name, date of birth and national ID. One verified history per employee was loaded into SAP SuccessFactors, then Employee 360 reporting was built on scheduled extracts through Excel and Power BI, later moving to QlikSense and the group's AWS platform.",
+    role: 'Led the data reconciliation and migration, and built the reporting.',
+    figure: '1M+',
+    result: 'workforce data points in one trusted Employee 360 view.',
+    diagram: true,
+  },
+  {
+    id: 'hr-reporting',
+    area: 'Engro, people analytics',
+    title: 'Group HR reporting, automated',
+    years: '2022 – 2026',
+    tools: 'SAP SuccessFactors, Excel, Power Query, Power BI',
+    problem: 'With data now in SuccessFactors, departments across the subsidiaries still received reports assembled by hand from Excel extracts: slow to produce and easy to get wrong.',
+    method: "Rebuilt the reporting as Power Query transformations feeding Power BI, refreshed from SuccessFactors extracts and shaped to each department's needs.",
+    role: 'Designed and built the automated reporting.',
+    figure: '70%',
+    result: 'less manual reporting effort, with reports delivered more often and more accurately.',
+  },
+  {
+    id: 'uae-insurer',
+    area: 'SHMA, actuarial',
+    title: "Actuarial work for a major UAE insurer, as part of its external actuary's team",
+    years: '2017 – 2022',
+    tools: 'Excel, Power Query, Alteryx, QlikView',
+    problem: "SHMA was the appointed external actuary for ADNIC, one of the UAE's leading insurers, and had to deliver its Central Bank of UAE actuarial requirements: underwriting reviews, the pricing adequacy report, reserving and ad hoc analysis. The data behind them sat in separate actuarial, claims and reinsurance sources.",
+    method: 'Combined the three data sets in integrated Alteryx and Excel frameworks, ran reserving, pricing adequacy and loss variance analysis, and presented the results through Qlik dashboards and variance models.',
+    role: "Analysis and reporting within the SHMA actuarial team, leading the UAE Workers' Compensation framework work.",
+    result: 'Regulatory deliverables produced on schedule, with faster reporting cycles and clearer evidence behind pricing, reserving and reinsurance decisions.',
+  },
+  {
+    id: 'alteryx',
+    area: 'SHMA, actuarial',
+    title: 'From macros to Alteryx',
+    years: '2016 – 2022',
+    tools: 'Excel, VBA, Alteryx',
+    problem: 'Actuarial reporting ran on spreadsheet models that needed repeated manual work every cycle and did not scale well.',
+    method: 'Automated recurring reporting with Excel VBA first, then rebuilt legacy actuarial models as Alteryx workflows that run end to end.',
+    role: 'Built the automation and the Alteryx workflows.',
+    figure: '50%+',
+    result: 'efficiency gain from the first automation, and far more scalable analysis after the move to Alteryx.',
+  },
+];
+const record = [
+  'Python automation at Engro: certificates for 2,500+ employees as PDFs and images, and personalised emails with individual attachments sent group-wide.',
+  'IFRS 17 groundwork at SHMA: early base models in Excel and Power Query while the standard was still new.',
+  "UAE Workers' Compensation framework: research, pricing models and reinsurance insights.",
+  'Reinsurance programme reviews across quota share and excess of loss structures.',
+];
+---
+<Base
+  title="Case studies | Muhammad Babar"
+  description="Case studies in data reconciliation, reporting automation and actuarial analytics from Engro and SHMA Consulting."
+>
+  <PageHeader
+    title="The work behind the numbers"
+    lede="Four engagements, each told the same way: the problem, the method, the measurable result. Client data stays confidential; the outcomes speak for it."
+  />
+
+  <section class="sec" aria-label="Case studies">
+    <div class="wrap">
+      {cases.map(({ diagram, ...c }) => (
+        <CaseFile {...c}>
+          {diagram && <div class="mdg-wrap"><MatchDiagram variant="light" /></div>}
+        </CaseFile>
+      ))}
+    </div>
+  </section>
+
+  <section class="sec sec-flush" aria-labelledby="record">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="record">Also on the record</h2></div>
+      <ul class="dash-list">{record.map((r) => <li>{r}</li>)}</ul>
+    </div>
+  </section>
+</Base>

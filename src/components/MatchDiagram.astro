@@ -1,0 +1,50 @@
+---
+interface Props { variant?: 'dark' | 'light' }
+const { variant = 'dark' } = Astro.props;
+const label = 'Three employee records from different subsidiaries merge into one employee record';
+const records = [
+  { sub: 'Subsidiary A', id: 'Employee ID 10442', years: '1990 – 2009', y: 0 },
+  { sub: 'Subsidiary B', id: 'Employee ID 7781', years: '2000 – 2017', y: 113 },
+  { sub: 'Subsidiary C', id: 'Employee ID 2290', years: '2010 – today', y: 226 },
+];
+---
+<div class={`mdg-box mdg-${variant}`}>
+  <svg class="mdg" viewBox="0 0 440 300" role="img" aria-label={label}>
+    {records.map((r) => (
+      <>
+        <rect class="mdg-card" x="0" y={r.y} width="170" height="74" rx="12" />
+        <text class="mdg-t1" x="16" y={r.y + 26}>{r.sub}</text>
+        <text class="mdg-t2" x="16" y={r.y + 48}>{r.id}</text>
+        <text class="mdg-t3" x="16" y={r.y + 64}>{r.years}</text>
+      </>
+    ))}
+
+    <path class="mdg-flow" d="M170 37 C 230 37, 220 150, 262 150" />
+    <path class="mdg-flow" d="M170 150 L 262 150" />
+    <path class="mdg-flow" d="M170 263 C 230 263, 220 150, 262 150" />
+    <circle class="mdg-dot" cx="262" cy="150" r="5" />
+
+    <rect class="mdg-res" x="270" y="92" width="170" height="116" rx="14" />
+    <text class="mdg-g1" x="286" y="122">One employee</text>
+    <text class="mdg-g2" x="286" y="144">Matched on name,</text>
+    <text class="mdg-g2" x="286" y="160">date of birth and</text>
+    <text class="mdg-g2" x="286" y="176">national ID</text>
+    <text class="mdg-g3" x="286" y="196">Full history, 1990 – 2026</text>
+  </svg>
+
+  <div class="mdg-stack">
+    {records.map((r) => (
+      <div class="mdg-rec">
+        <p class="rec-1">{r.sub}</p>
+        <p class="rec-2">{r.id}</p>
+        <p class="rec-3">{r.years}</p>
+      </div>
+    ))}
+    <div class="mdg-line" aria-hidden="true"></div>
+    <div class="mdg-out">
+      <p class="out-1">One employee</p>
+      <p class="out-2">Matched on name, date of birth and national ID</p>
+      <p class="out-3">Full history, 1990 – 2026</p>
+    </div>
+  </div>
+</div>

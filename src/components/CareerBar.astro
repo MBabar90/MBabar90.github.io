@@ -1,0 +1,21 @@
+---
+const years = ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'];
+const segs = [
+  { cls: 's1', title: 'Analyst', org: 'SHMA', dates: 'Jul 2016 – Jun 2017' },
+  { cls: 's2', title: 'Senior Actuarial Analyst', org: 'SHMA', dates: 'Jul 2017 – Jun 2021' },
+  { cls: 's3', title: 'Asst. Manager', org: 'SHMA', dates: 'Jul 2021 – Nov 2022' },
+  { cls: 's4', title: 'Deputy Manager, People Analytics', org: 'Engro', dates: 'Nov 2022 – Jan 2026' },
+  { cls: 's5', title: 'FINSTRIDE', org: 'ApexPaths', dates: '2026' },
+];
+---
+<div class="track">
+  <div class="years" aria-hidden="true">{years.map((y) => <span>{y}</span>)}</div>
+  <div class="bar-row">
+    {segs.map((s) => <div class={`seg ${s.cls}`}><b>{s.title}</b>{s.org}</div>)}
+  </div>
+  <ol class="career-list">
+    {segs.map((s) => (
+      <li class={s.cls}><b>{s.title}</b><span class="org">{s.org}</span><span>{s.dates}</span></li>
+    ))}
+  </ol>
+</div>

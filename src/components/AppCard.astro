@@ -1,0 +1,9 @@
+---
+interface Props { name: string; color: 'dash' | 'report'; status: string }
+const { name, color, status } = Astro.props;
+---
+<article class="app-card" style={`--app: var(--${color})`}>
+  <h3>{name}</h3>
+  <p class="status">{status}</p>
+  <p><slot /></p>
+</article>

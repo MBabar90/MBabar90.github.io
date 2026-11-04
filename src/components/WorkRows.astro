@@ -1,0 +1,14 @@
+---
+interface Row { id: string; title: string; org: string; result: string }
+interface Props { rows: Row[] }
+const { rows } = Astro.props;
+---
+<ul class="work-list">
+  {rows.map((r) => (
+    <li>
+      <h3><a href={`/work#${r.id}`}>{r.title}</a></h3>
+      <span class="org">{r.org}</span>
+      <span class="res">{r.result}</span>
+    </li>
+  ))}
+</ul>
