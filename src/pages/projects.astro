@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import PageHeader from '../components/PageHeader.astro';
 import AppCard from '../components/AppCard.astro';
+import StudioCard from '../components/StudioCard.astro';
 ---
 <Base
   title="Projects | Muhammad Babar"
@@ -10,7 +11,9 @@ import AppCard from '../components/AppCard.astro';
   <PageHeader
     title="Built after hours, run like products"
     lede="Designed, coded and shipped independently under the ApexPaths name. Each one answers a problem first met at work."
-  />
+  >
+    <StudioCard />
+  </PageHeader>
 
   <section class="sec" aria-label="FINSTRIDE">
     <div class="wrap">
@@ -19,7 +22,7 @@ import AppCard from '../components/AppCard.astro';
           <h2>FINSTRIDE</h2>
           <p class="status">Live</p>
           <p class="desc">Personal finance that stays honest: an income statement, balance sheet and cash flow, budgets, goals and cash-flow forecasts, on the web and as an installable phone app.</p>
-          <a class="link" href="https://apexpaths.co" target="_blank" rel="noopener">Visit ApexPaths</a>
+          <a class="link" href="https://apexpaths.co/finstride" target="_blank" rel="noopener">Open FINSTRIDE</a>
         </div>
         <div>
           <h3>What it took</h3>
