@@ -1,0 +1,102 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Case studies · Muhammad Babar" description="Five projects told as problem, method and result: Employee 360, automated HR reporting, ADNIC actuarial work, Alteryx automation and FINSTRIDE." active="work">
+<section class="page-hero"><div class="wrap">
+  <span class="lab eyebrow">Case studies</span>
+  <h1>How the work gets done.</h1>
+  <p>Five projects, each told the same way: the problem, the method, the result. Client data stays confidential.</p>
+  <div class="jump"><a href="#employee-360">Employee 360</a><a href="#hr-reporting">HR reporting</a><a href="#adnic">ADNIC</a><a href="#alteryx">Macros to Alteryx</a><a href="#finstride">FINSTRIDE</a></div>
+</div></section>
+
+<div class="wrap">
+<article class="study" id="employee-360">
+  <div class="meta"><span class="lab">Engro · people analytics</span><h2>One history for every employee</h2>
+    <dl><div><dt>When</dt><dd>2022 – 2026</dd></div><div><dt>Role</dt><dd>Led the data reconciliation and migration, and built the reporting</dd></div><div><dt>Tools</dt><dd>Power Query, Excel, Power BI, Qlik Sense, SAP HCM, SAP SuccessFactors</dd></div></dl></div>
+  <div class="pmr">
+    <div><h3>Problem</h3><p>Employees moved between the group's subsidiaries, and each SAP HCM instance issued its own ID. The same person existed as several unconnected records, so no system could show a complete career history.</p></div>
+    <div class="viz watch"><div class="viz-scroll">
+      <svg class="merge" viewBox="0 0 720 250" role="img" aria-label="Three records with different IDs merge into one employee history">
+        <g class="src"><rect x="2" y="10" width="220" height="60" rx="10"/><text x="18" y="36">Subsidiary A · ID 10442</text><text class="s" x="18" y="56">2001 – 2009</text></g>
+        <g class="src"><rect x="2" y="95" width="220" height="60" rx="10"/><text x="18" y="121">Subsidiary B · ID 7781</text><text class="s" x="18" y="141">2009 – 2017</text></g>
+        <g class="src"><rect x="2" y="180" width="220" height="60" rx="10"/><text x="18" y="206">Subsidiary C · ID 2290</text><text class="s" x="18" y="226">2017 – today</text></g>
+        <path class="wire" d="M222 40 C330 40 330 125 440 125"/><path class="wire" d="M222 125 H440"/><path class="wire" d="M222 210 C330 210 330 125 440 125"/>
+        <g class="one"><rect x="440" y="80" width="276" height="90" rx="12"/><text x="458" y="108">One employee</text><text class="s" x="458" y="130">Matched on name, date of birth, national ID</text><text class="y" x="458" y="153">Full history, 2001 – today</text></g>
+      </svg></div><span class="cap">Illustrative records. Real data stays confidential.</span></div>
+    <div><h3>Method</h3><p>Matched records in Power Query on name, date of birth and national ID. One verified history per employee was loaded into SAP SuccessFactors, and Employee 360 reporting was built on top: first in Excel and Power BI, later in Qlik Sense, and then on the group's AWS platform, where I supported the data team with mapping and validation.</p></div>
+    <div class="res"><h3>Result</h3><b data-n="1" data-suf="M+">1M+</b><span>workforce data points in one trusted Employee 360 view</span></div>
+  </div>
+</article>
+
+<article class="study" id="hr-reporting">
+  <div class="meta"><span class="lab">Engro · reporting</span><h2>Group HR reporting, automated</h2>
+    <dl><div><dt>When</dt><dd>2022 – 2026</dd></div><div><dt>Role</dt><dd>Designed and built the automated reporting</dd></div><div><dt>Tools</dt><dd>SAP SuccessFactors, Power Query, Power BI, Qlik Sense</dd></div></dl></div>
+  <div class="pmr">
+    <div><h3>Problem</h3><p>Departments across the subsidiaries received reports assembled by hand from Excel extracts: slow to produce and easy to get wrong. Different reports defined the same KPI in different ways.</p></div>
+    <div><h3>Method</h3><p>Rebuilt the reporting as Power Query transformations feeding Power BI and Qlik Sense, refreshed from SuccessFactors and shaped to each department's needs. Standardised KPI definitions so every report told the same story.</p></div>
+    <div class="viz watch"><div class="cmp">
+      <div class="r"><span>Before</span><div class="t"><i style="--w:100%"></i></div><b>100</b></div>
+      <div class="r after"><span>After</span><div class="t"><i style="--w:30%"></i></div><b>~30</b></div>
+    </div><span class="cap">Manual effort per reporting cycle, indexed to 100. A rough estimate.</span></div>
+    <div class="res"><h3>Result</h3><b data-n="70" data-pre="~" data-suf="%">~70%</b><span>less manual effort, with reports delivered more often and more accurately. Used by the CPO, the CFO and heads of department.</span></div>
+  </div>
+</article>
+
+<article class="study" id="adnic">
+  <div class="meta"><span class="lab">SHMA · actuarial</span><h2>Appointed actuary work for ADNIC</h2>
+    <dl><div><dt>When</dt><dd>2017 – 2022</dd></div><div><dt>Role</dt><dd>Analysis and reporting within the SHMA actuarial team</dd></div><div><dt>Tools</dt><dd>Excel, Power Query, Alteryx, QlikView</dd></div></dl></div>
+  <div class="pmr">
+    <div><h3>Problem</h3><p>SHMA was the appointed external actuary for ADNIC, one of the UAE's leading insurers, and had to deliver its Central Bank of UAE actuarial requirements: underwriting reviews, the pricing adequacy report, reserving and ad hoc analysis. The data behind them sat in separate actuarial, claims and reinsurance sources.</p></div>
+    <div class="viz watch"><div class="flow">
+      <div class="col"><span class="n">Actuarial data</span><span class="n">Claims data</span><span class="n">Reinsurance data</span></div>
+      <span class="arr">→</span>
+      <div class="col"><span class="n k">Alteryx and Excel framework</span></div>
+      <span class="arr">→</span>
+      <div class="col"><span class="n">Pricing adequacy</span><span class="n">Reserving</span><span class="n">Qlik dashboards</span></div>
+    </div></div>
+    <div><h3>Method</h3><p>Combined the three data sets in integrated Alteryx and Excel frameworks, ran reserving, pricing adequacy and loss variance analysis, and presented the results through Qlik dashboards and variance models.</p></div>
+    <div class="res"><h3>Result</h3><b class="w">On schedule</b><span>Regulatory deliverables produced on time, with faster reporting cycles and clearer evidence behind pricing, reserving and reinsurance decisions.</span></div>
+  </div>
+</article>
+
+<article class="study" id="alteryx">
+  <div class="meta"><span class="lab">SHMA · automation</span><h2>From macros to Alteryx</h2>
+    <dl><div><dt>When</dt><dd>2016 – 2022</dd></div><div><dt>Role</dt><dd>Built the automation and the Alteryx workflows</dd></div><div><dt>Tools</dt><dd>Excel, VBA, Alteryx</dd></div></dl></div>
+  <div class="pmr">
+    <div><h3>Problem</h3><p>Actuarial reporting ran on spreadsheet models that needed repeated manual work every cycle and did not scale.</p></div>
+    <div><h3>Method</h3><p>Automated recurring reporting with Excel VBA first, then rebuilt legacy actuarial models as Alteryx workflows that run end to end.</p></div>
+    <div class="viz watch"><div class="cmp">
+      <div class="r"><span>Before</span><div class="t"><i style="--w:100%"></i></div><b>100</b></div>
+      <div class="r after"><span>After</span><div class="t"><i style="--w:50%"></i></div><b>~50</b></div>
+    </div><span class="cap">Time on routine reporting, indexed to 100. A rough estimate.</span></div>
+    <div class="res"><h3>Result</h3><b data-n="50" data-pre="~" data-suf="%">~50%</b><span>less time on routine reporting from the first automation, and far more scalable analysis after the move to Alteryx.</span></div>
+  </div>
+</article>
+
+<article class="study" id="finstride">
+  <div class="meta"><span class="lab">ApexPaths · own product</span><h2>FINSTRIDE, from spreadsheet to app</h2>
+    <dl><div><dt>When</dt><dd>2025 – 2026</dd></div><div><dt>Role</dt><dd>Co-founder. Designed the rules, the data model and the product</dd></div><div><dt>Tools</dt><dd>Excel, Python, Flask, PostgreSQL, JavaScript, Render, Neon, Paddle</dd></div></dl></div>
+  <div class="pmr">
+    <div><h3>Problem</h3><p>A household budget had grown into a complete system in Excel, but only someone comfortable with Excel could use it.</p></div>
+    <div class="stage sm watch" aria-label="FINSTRIDE on phone and computer">
+      <img class="stmt" src="/img/stmt.webp" alt="FINSTRIDE income statement" width="1400" height="698" loading="lazy">
+      <img class="scan" src="/img/scan.webp" alt="FINSTRIDE receipt scan" width="600" height="918" loading="lazy">
+      <div class="phone"><img src="/img/phone.webp" alt="FINSTRIDE home screen on a phone" width="420" height="1093" loading="lazy"></div>
+    </div>
+    <div><h3>Method</h3><p>Proved every rule in Excel first. Then built the web app with Claude: the data model, the logic, security with two-step login, passkeys and rate limiting, offline entry, and payments in testing.</p></div>
+    <div class="res"><h3>Result</h3><b class="w">Open beta</b><span>On the web and as an installable phone app, from 16 November 2026.</span>
+      <div class="links-row"><a class="btn solid" href="https://apexpaths.co/finstride" target="_blank" rel="noopener">Visit FINSTRIDE</a><a class="btn" href="https://apexpaths.co" target="_blank" rel="noopener">Visit ApexPaths</a></div></div>
+  </div>
+</article>
+</div>
+
+<section class="sec" style="padding-top:40px"><div class="wrap">
+  <div class="sec-head"><h2>Also on the record</h2></div>
+  <ul class="record reveal">
+    <li><b>Python automation at Engro</b><span>Certificates as PDFs and images for 2,500+ employees, and personalised emails with individual attachments.</span></li>
+    <li><b>IFRS 17 groundwork at SHMA</b><span>Early base models in Excel and Power Query, as part of the team, while the standard was still new.</span></li>
+    <li><b>Workers' Compensation, UAE</b><span>A preliminary study: reinsurance options, pricing, cost-benefit and expected P&amp;L impact.</span></li>
+    <li><b>HR chatbot proof of concept</b><span>Prepared the data, wrote the test questions and checked answers against the source.</span></li>
+  </ul>
+</div></section>
+</Base>
