@@ -1,11 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
+import nav from '../content/nav.html?raw';
+import tail from '../content/tail.html?raw';
 ---
 <Base title="Page not found · Muhammad Babar" description="This page doesn’t exist." noindex>
+<Fragment set:html={nav} />
+<main id="main">
   <section class="page-hero"><div class="wrap">
-    <span class="lab eyebrow">404</span>
+    <span class="lab">404</span>
     <h1>This path doesn't lead anywhere.</h1>
     <p>The page may have moved. The site now has three pages: home, experience and case studies.</p>
     <div class="cta"><a class="btn solid" href="/">Go home</a><a class="btn" href="/work/">Case studies</a></div>
   </div></section>
+</main>
+<Fragment set:html={tail} />
 </Base>

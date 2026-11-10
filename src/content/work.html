@@ -1,0 +1,130 @@
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav"><div class="wrap">
+  <a class="me" href="/"><i aria-hidden="true">MB</i>Muhammad Babar</a>
+  <nav class="links" aria-label="Main">
+    <a href="/experience/">Experience</a><a href="/work/" class="on" aria-current="page">Case studies</a><a href="/#apps">Apps</a><a href="#contact">Contact</a>
+    <a class="li-btn" href="https://www.linkedin.com/in/mubabar90" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38zM5.25 3.5a1.96 1.96 0 1 0 0 3.92 1.96 1.96 0 0 0 0-3.92M20.44 13.4c0-3.1-1.65-4.55-3.86-4.55-1.78 0-2.58.98-3.02 1.67V8.5h-3.38c.04.95 0 11.5 0 11.5h3.38v-6.42c0-.34.03-.69.12-.93.27-.69.89-1.4 1.93-1.4 1.36 0 1.9 1.04 1.9 2.56V20h3.38z"/></svg>LinkedIn</a>
+  </nav>
+</div></header>
+
+<main id="main">
+<section class="page-hero" data-play>
+  <div class="glow g1" aria-hidden="true"></div>
+  <svg class="contours" viewBox="0 0 600 600" aria-hidden="true"><path d="M300 90c120 0 210 90 210 210s-90 220-210 220S80 420 80 300 180 90 300 90z"/><path d="M300 140c95 0 165 70 165 160s-70 175-165 175-170-80-170-175 75-160 170-160z"/><path d="M300 190c70 0 120 50 120 110s-50 130-120 130-125-60-125-130 55-110 125-110z"/><path d="M300 240c40 0 75 30 75 60s-35 85-75 85-80-40-80-85 40-60 80-60z"/></svg>
+  <div class="wrap">
+    <span class="lab">Case studies</span>
+    <h1>How the work gets done.</h1>
+    <p>Five projects, each told the same way: the problem, the method, the result. Client data stays confidential.</p>
+    <div class="jump"><a href="#employee-360">Employee 360</a><a href="#hr-reporting">HR reporting</a><a href="#adnic">ADNIC</a><a href="#alteryx">Macros to Alteryx</a><a href="#finstride">FINSTRIDE</a></div>
+  </div>
+</section>
+
+<div class="wrap">
+<article class="study" id="employee-360">
+  <div class="meta rv"><span class="lab">Engro · people analytics</span><h2>One history for every employee</h2>
+    <dl><div><dt>When</dt><dd>2022 – 2026</dd></div><div><dt>Role</dt><dd>Led the data reconciliation and migration, and built the reporting</dd></div><div><dt>Tools</dt><dd>Power Query, Excel, Power BI, Qlik Sense, SAP HCM, SAP SuccessFactors</dd></div></dl></div>
+  <div class="pmr">
+    <div class="step rv"><h3>Problem</h3><p>Employees moved between the group's subsidiaries, and each SAP HCM instance issued its own ID. The same person existed as several unconnected records, so no system could show a complete career history.</p></div>
+    <div class="viz watch rv"><div class="viz-scroll">
+      <svg class="merge" viewBox="0 0 720 250" role="img" aria-label="Three records with different IDs merge into one employee history">
+        <g class="src"><rect x="2" y="10" width="220" height="60" rx="10"/><text x="18" y="36">Subsidiary A · ID 10442</text><text class="s" x="18" y="56">2001 – 2009</text></g>
+        <g class="src"><rect x="2" y="95" width="220" height="60" rx="10"/><text x="18" y="121">Subsidiary B · ID 7781</text><text class="s" x="18" y="141">2009 – 2017</text></g>
+        <g class="src"><rect x="2" y="180" width="220" height="60" rx="10"/><text x="18" y="206">Subsidiary C · ID 2290</text><text class="s" x="18" y="226">2017 – today</text></g>
+        <path class="wire" d="M222 40 C330 40 330 125 440 125"/><path class="wire" d="M222 125 H440"/><path class="wire" d="M222 210 C330 210 330 125 440 125"/>
+        <g class="one"><rect x="440" y="80" width="276" height="90" rx="12"/><text x="458" y="108">One employee</text><text class="s" x="458" y="130">Matched on name, date of birth, national ID</text><text class="y" x="458" y="153">Full history, 2001 – today</text></g>
+      </svg></div><span class="cap">Illustrative records. Real data stays confidential.</span></div>
+    <div class="step rv"><h3>Method</h3><p>Matched records in Power Query on name, date of birth and national ID. One verified history per employee was loaded into SAP SuccessFactors, and Employee 360 reporting was built on top: first in Excel and Power BI, later in Qlik Sense, and then on the group's AWS platform, where I supported the data team with mapping and validation.</p></div>
+    <div class="res rv"><h3>Result</h3><b data-n="1" data-suf="M+">1M+</b><span>workforce data points in one trusted Employee 360 view</span></div>
+  </div>
+</article>
+
+<article class="study" id="hr-reporting">
+  <div class="meta rv"><span class="lab">Engro · reporting</span><h2>Group HR reporting, automated</h2>
+    <dl><div><dt>When</dt><dd>2022 – 2026</dd></div><div><dt>Role</dt><dd>Designed and built the automated reporting</dd></div><div><dt>Tools</dt><dd>SAP SuccessFactors, Power Query, Power BI, Qlik Sense</dd></div></dl></div>
+  <div class="pmr">
+    <div class="step rv"><h3>Problem</h3><p>Departments across the subsidiaries received reports assembled by hand from Excel extracts: slow to produce and easy to get wrong. Different reports defined the same KPI in different ways.</p></div>
+    <div class="step rv"><h3>Method</h3><p>Rebuilt the reporting as Power Query transformations feeding Power BI and Qlik Sense, refreshed from SuccessFactors and shaped to each department's needs. Standardised KPI definitions so every report told the same story.</p></div>
+    <div class="viz watch rv"><div class="cmp">
+      <div class="r"><span>Before</span><div class="t"><i style="--w:100%"></i></div><b>100</b></div>
+      <div class="r after"><span>After</span><div class="t"><i style="--w:30%"></i></div><b>~30</b></div>
+    </div><span class="cap">Manual effort per reporting cycle, indexed to 100. A rough estimate.</span></div>
+    <div class="res rv"><h3>Result</h3><b data-n="70" data-pre="~" data-suf="%">~70%</b><span>less manual effort, with reports delivered more often and more accurately. Used by the CPO, the CFO and heads of department.</span></div>
+  </div>
+</article>
+
+<article class="study" id="adnic">
+  <div class="meta rv"><span class="lab">SHMA · actuarial</span><h2>Appointed actuary work for ADNIC</h2>
+    <dl><div><dt>When</dt><dd>2017 – 2022</dd></div><div><dt>Role</dt><dd>Analysis and reporting within the SHMA actuarial team</dd></div><div><dt>Tools</dt><dd>Excel, Power Query, Alteryx, QlikView</dd></div></dl></div>
+  <div class="pmr">
+    <div class="step rv"><h3>Problem</h3><p>SHMA was the appointed external actuary for ADNIC, one of the UAE's leading insurers, and had to deliver its Central Bank of UAE actuarial requirements: underwriting reviews, the pricing adequacy report, reserving and ad hoc analysis. The data behind them sat in separate actuarial, claims and reinsurance sources.</p></div>
+    <div class="viz watch rv"><div class="flow">
+      <div class="col"><span class="n">Actuarial data</span><span class="n">Claims data</span><span class="n">Reinsurance data</span></div>
+      <span class="arr">→</span>
+      <div class="col"><span class="n k">Alteryx and Excel framework</span></div>
+      <span class="arr">→</span>
+      <div class="col"><span class="n">Pricing adequacy</span><span class="n">Reserving</span><span class="n">Qlik dashboards</span></div>
+    </div></div>
+    <div class="step rv"><h3>Method</h3><p>Combined the three data sets in integrated Alteryx and Excel frameworks, ran reserving, pricing adequacy and loss variance analysis, and presented the results through Qlik dashboards and variance models.</p></div>
+    <div class="res rv"><h3>Result</h3><b class="w">On schedule</b><span>Regulatory deliverables produced on time, with faster reporting cycles and clearer evidence behind pricing, reserving and reinsurance decisions.</span></div>
+  </div>
+</article>
+
+<article class="study" id="alteryx">
+  <div class="meta rv"><span class="lab">SHMA · automation</span><h2>From macros to Alteryx</h2>
+    <dl><div><dt>When</dt><dd>2016 – 2022</dd></div><div><dt>Role</dt><dd>Built the automation and the Alteryx workflows</dd></div><div><dt>Tools</dt><dd>Excel, VBA, Alteryx</dd></div></dl></div>
+  <div class="pmr">
+    <div class="step rv"><h3>Problem</h3><p>Actuarial reporting ran on spreadsheet models that needed repeated manual work every cycle and did not scale.</p></div>
+    <div class="step rv"><h3>Method</h3><p>Automated recurring reporting with Excel VBA first, then rebuilt legacy actuarial models as Alteryx workflows that run end to end.</p></div>
+    <div class="viz watch rv"><div class="cmp">
+      <div class="r"><span>Before</span><div class="t"><i style="--w:100%"></i></div><b>100</b></div>
+      <div class="r after"><span>After</span><div class="t"><i style="--w:50%"></i></div><b>~50</b></div>
+    </div><span class="cap">Time on routine reporting, indexed to 100. A rough estimate.</span></div>
+    <div class="res rv"><h3>Result</h3><b data-n="50" data-pre="~" data-suf="%">~50%</b><span>less time on routine reporting from the first automation, and far more scalable analysis after the move to Alteryx.</span></div>
+  </div>
+</article>
+
+<article class="study" id="finstride">
+  <div class="meta rv"><span class="lab">ApexPaths · own product</span><h2>FINSTRIDE, from spreadsheet to app</h2>
+    <dl><div><dt>When</dt><dd>2025 – 2026</dd></div><div><dt>Role</dt><dd>Co-founder. Designed the rules, the data model and the product</dd></div><div><dt>Tools</dt><dd>Excel, Python, Claude, GitHub, Cloudflare, Render, Neon, Brevo, Google Gemini, Paddle, Google Workspace, UptimeRobot</dd></div></dl></div>
+  <div class="pmr">
+    <div class="step rv"><h3>Problem</h3><p>A household budget had grown into a complete system in Excel, but only someone comfortable with Excel could use it.</p></div>
+    <div class="stage sm rv" aria-label="FINSTRIDE on phone and computer" role="img">
+      <img class="stmt" src="/assets/img/stmt.webp" alt="" width="1400" height="698" loading="lazy">
+      <img class="scan" src="/assets/img/scan.webp" alt="" width="600" height="918" loading="lazy">
+      <div class="phone"><img src="/assets/img/phone.webp" alt="" width="420" height="1093" loading="lazy"></div>
+    </div>
+    <div class="step rv"><h3>Method</h3><p>Proved every rule in Excel first. Then built the web app with Claude: the data model, the logic, security with two-step login, passkeys and rate limiting, offline entry, and payments in testing.</p></div>
+    <div class="res rv"><h3>Result</h3><b class="w">Open beta</b><span>On the web and as an installable phone app, from 16 November 2026.</span>
+      <div class="links-row"><a class="btn solid" href="https://apexpaths.co/finstride" target="_blank" rel="noopener">Visit FINSTRIDE</a><a class="btn" href="https://apexpaths.co" target="_blank" rel="noopener">Visit ApexPaths</a></div></div>
+  </div>
+</article>
+</div>
+
+<section class="sec" style="padding-top:40px"><div class="wrap">
+  <div class="sec-head"><h2 class="rv">Also on the record</h2></div>
+  <ul class="record">
+    <li class="rv"><b>Python automation at Engro</b><span>Certificates as PDFs and images for 2,500+ employees, and personalised emails with individual attachments.</span></li>
+    <li class="rv d1"><b>IFRS 17 groundwork at SHMA</b><span>Early base models in Excel and Power Query, as part of the team, while the standard was still new.</span></li>
+    <li class="rv d2"><b>Workers' Compensation, UAE</b><span>A preliminary study: reinsurance options, pricing, cost-benefit and expected P&amp;L impact.</span></li>
+    <li class="rv d3"><b>HR chatbot proof of concept</b><span>Prepared the data, wrote the test questions and checked answers against the source.</span></li>
+  </ul>
+</div></section>
+</main>
+
+<section class="night contact" id="contact" data-play>
+  <div class="glow n1" aria-hidden="true"></div>
+  <div class="wrap grid">
+    <div><span class="lab">Contact</span><h2>Let's make your numbers agree.</h2><p>Data in several places, reports that don't match? Send a short note on what you're working with. Open to freelance, contract, part-time and full-time work.</p></div>
+    <div>
+      <div class="mail"><code id="mail">muhammad_babar90@hotmail.com</code><button class="copy" id="copy" type="button">Copy</button></div>
+      <dl class="terms"><dt>Work</dt><dd>Freelance projects, contract, part-time or full-time roles</dd><dt>Where</dt><dd>Remote, or on-site</dd><dt>Hours</dt><dd>Working to your time zone</dd><dt>Based</dt><dd>Lahore, Pakistan</dd></dl>
+    </div>
+  </div>
+  <svg class="ridge" viewBox="0 0 1440 160" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <path class="r1" d="M-10 160 L-10 120 L200 80 L360 110 L540 50 L700 95 L880 60 L1060 100 L1250 70 L1450 110 L1450 160Z"/>
+    <path class="r2" d="M620 160 L860 90 L960 120 L1140 30 L1240 90 L1450 140 L1450 160Z"/>
+    <line class="pole" x1="1140" y1="30" x2="1140" y2="4"/><path class="flag" d="M1141 5 L1162 12 L1141 19Z"/>
+  </svg>
+</section>
+<footer><div class="wrap"><span>© 2026 Muhammad Babar</span><nav><a href="https://www.linkedin.com/in/mubabar90" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.credly.com/users/muhammad-babar90" target="_blank" rel="noopener">Credly</a><a href="https://apexpaths.co" target="_blank" rel="noopener">ApexPaths</a><a href="https://apexpaths.co/finstride" target="_blank" rel="noopener">FINSTRIDE</a></nav></div></footer>
