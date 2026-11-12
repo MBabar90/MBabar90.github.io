@@ -19,4 +19,4 @@ Node 20 or newer.
 - `.github/workflows/deploy.yml`: builds and publishes to GitHub Pages on every push to `main`
 
 ## Changes
-See `CHANGELOG.md`. Branches, commit names and versions follow the ApexPaths rules (`F:\Portfolio Development\claude\Plan\team-structure-plan.md`).
+See `CHANGELOG.md`. Branches, commit names and versions follow the ApexPaths rules (`F:\Portfolio Development\claude - FINSTRIDE\Plan\team-structure-plan.md`).
