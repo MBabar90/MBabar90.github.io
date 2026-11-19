@@ -115,7 +115,7 @@ a.credit:hover{color:var(--brass-t)}
 .apps-sec .lead{color:var(--night-mut);font-size:18px;max-width:52ch;margin-top:16px}
 .apps{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;margin-top:44px}
 .fs{background:var(--night2);border:1px solid var(--night-line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
-.stage{position:relative;height:300px;background:linear-gradient(160deg,#12303A,#12303A);overflow:hidden}
+.stage{position:relative;height:300px;background:#12303A;background:linear-gradient(180deg,#12303A,#0B6478);overflow:hidden}
 .stage .stmt{position:absolute;left:6%;top:12%;width:66%;border-radius:10px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
 .stage .scan{position:absolute;left:56%;top:22%;width:20%;border-radius:10px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
 .stage .phone{position:absolute;right:6%;top:8%;width:21%;border-radius:18px;border:5px solid #0E1012;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
